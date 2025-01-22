@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #b56576, #6d6875, #f0f0f0);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s infinite;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+.date-time {
+    font-size: 1rem;
+    margin-top: 5px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+
+.task-input input,
+.task-input select {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #b56576;
+    border-radius: 8px;
+    font-size: 1rem;
+    animation: slideIn 1s ease-out;
+}
+
+.task-input button {
+    background: #b56576;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.task-input button:hover {
+    transform: scale(1.1);
+}
+
+/* Task List */
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 8px;
+    animation: popIn 0.5s ease-out;
+}
+
+.task-list li span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.task-list li button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.task-list li button.complete {
+    color: green;
+}
+
+.task-list li button.delete {
+    color: red;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
